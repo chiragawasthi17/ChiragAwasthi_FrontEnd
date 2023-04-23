@@ -16,7 +16,9 @@ On line 59, the 'items: null' assigns a null value, which raises an error when u
 To ensure that the onClickHandler works correctly and uses the updated state, it should be called as a new callback function passed in the onClick event as (onClick={() => onClickHandler(index)}). Using (onClick={onClickHandler(index)}) will cause the function to use stale values. This is because in JavaScript, variables and states are aware of the environment in which they are created and may not be updated. Therefore, it is recommended to wrap the event handler function in a callback.
 
 OPTIMIZATION:
+
 Changes made in this code:
+
 Removed the wrapping of SingleListItem and WrappedListComponent components into separate variables.
 Removed index and isSelected props default values from SingleListItem as it is required to be passed always.
 Simplified the arrow function used in SingleListItem component.
