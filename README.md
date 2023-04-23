@@ -1,9 +1,11 @@
 # STEELEYE
 
 #Question 1
+
 The simple List component is a user interface element used to display a collection of related items in a list format. It is a versatile and commonly used UI element that provides an intuitive way for users to navigate and interact with a large amount of information. The list component typically consists of a series of list items or rows, where each item contains some information, such as text, images, or icons. Users can interact with the list by scrolling up and down or left and right to view all the items. The simple List component can be used for a variety of purposes, such as displaying menu options, presenting search results, or showing a list of items in a shopping cart.To enhance the re-rendering efficiency of the List component, two JSX-returning functions are included within the component, and each is enclosed in React.memo(). This allows the List component to use these functions efficiently.The primary responsibility of the component is to exhibit a list of elements in the form of a JSX-returning function. For each list item, the component accepts props.By taking an array of objects called 'items' as an argument, the component can display each object's 'text' property on the screen via the items.map() function. Whenever a user clicks on an item, the component re-renders with new properties as the 'selectedIndex' property changes and highlights the selected item in green.
 
 #Question 2
+
 onClickHandler is invoked and executed while rendering instead of passing it as function. selectedIndex destructuring is wrong, First item should be state other would be setter function. key prop is not passed while rendering SingleListItem. Instead of passing different onClickHandler to each SingleListItem, Pass handleClick once and from SingleListItem call onClickHandler with its index prop. WrappedListComponent receives items, Which could be null instead of array, This case should be handled correctly.
 To define the props of array type, use 'PropTypes.arrayOf' instead of 'PropTypes.array,' which is not a valid propType.
 The onClickHandler prop is expecting the event handler function as its value, but in the code, it is invoking the function directly, which may cause errors or unexpected behavior.
