@@ -1,5 +1,5 @@
 /*
-Changes made in this code:
+Changes made in this code are:
 Removed the wrapping of SingleListItem and WrappedListComponent components into separate variables.
 Removed index and isSelected props default values from SingleListItem as it is required to be passed always.
 Simplified the arrow function used in SingleListItem component.
