@@ -1,3 +1,12 @@
+/*
+Changes made in this code:
+Removed the wrapping of SingleListItem and WrappedListComponent components into separate variables.
+Removed index and isSelected props default values from SingleListItem as it is required to be passed always.
+Simplified the arrow function used in SingleListItem component.
+Corrected the PropTypes format to define items prop array of objects with the text property.
+Set default value for items to be an array of objects containing text property, instead of null.
+*/
+
 import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
